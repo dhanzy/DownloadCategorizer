@@ -1,0 +1,16 @@
+name: File Categotizer
+description: Move files in the Download Folder to their appropriate Folder
+
+version: 1.0
+
+track: '/home/defalt/Downloads'
+dst_path: '/home/defalt'
+
+content_path:
+    .mp3: 'Music'
+    .mp4: 'Videos'
+    .mkv: 'Videos'
+    .pdf: 'Documents'
+    .jpeg: 'Pictures'
+    .jpg: 'Pictures'
+    .png: 'Pictures'
