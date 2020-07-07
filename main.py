@@ -17,8 +17,8 @@ from watchdog.events import FileSystemEventHandler
 with open('config.yml') as file:
     data = yaml.load(file, Loader=yaml.FullLoader)
 
-folder_to_track = data.get('track')
-folder_destination = data.get('dst_path')
+folder_to_track = data.get('track') if data.get('track') != '' else os.path.join(os.environ.get('HOME'), 'Downloads')
+folder_destination = data.get('dst_path') if data.get('dst_path') != '' else os.environ.get('HOME')
 extenstions = data.get('content_path')
 
 
